@@ -128,6 +128,21 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{ou
 .split .pic{aspect-ratio:4/5;border-radius:14px;background-size:cover;background-position:center}
 .cta2{background:linear-gradient(150deg,rgba(22,18,12,.93),rgba(46,36,22,.85)),url('img/sash.jpg') center 40%/cover}
 .nicei{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:8px;padding:7px 13px;font-size:13.5px;font-weight:600;margin-top:16px}
+
+.ctop{height:190px}
+@media(max-width:700px){.ctop{height:160px}}
+.faqs{max-width:820px;margin:0 auto}
+.faq{background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:10px;overflow:hidden}
+.faq summary{cursor:pointer;list-style:none;padding:16px 18px;font-weight:600;font-size:16px;display:flex;justify-content:space-between;gap:14px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:22px;color:var(--acc);font-weight:400;line-height:1}
+.faq[open] summary::after{content:"\2212"}
+.faq p{padding:0 18px 16px;color:var(--mut);font-size:15px;margin:0}
+.callbar{display:none}
+@media(max-width:820px){
+ .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:90;background:var(--deep2);color:#fff;align-items:center;justify-content:center;gap:10px;padding:13px;font-weight:700;font-size:16px;text-decoration:none;box-shadow:0 -4px 18px rgba(0,0,0,.28)}
+ body{padding-bottom:56px}
+}
 </style>
 
 <div class="demobar">This is a <b>concept website</b> built by AG1 Consulting for Crown Restoration Ltd. It is not a live site and no form on it sends anywhere.</div>
@@ -141,6 +156,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{ou
       <a href="#heritage">Heritage</a>
       <a href="#work">Our Work</a>
       <a href="#areas">Areas</a>
+      <a href="#faq">FAQ</a>
     </div>
     <a class="call" href="tel:+447595909196">&#9742; 07595 909196</a>
   </div>
@@ -348,6 +364,23 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{ou
   </div>
 </section>
 
+<section class="band" id="faq">
+  <div class="wrap">
+    <div class="sh">
+      <div class="kick">Straight answers</div>
+      <h2>Repair or replace? The questions that decide it</h2>
+      <p>We would rather talk you out of the wrong job than sell you it.</p>
+    </div>
+    <div class="faqs">
+      <details class="faq"><summary>Is it cheaper to repair a sash window or replace it?</summary><p>Usually to repair &mdash; often considerably. Rot is normally confined to the cill and the bottom rail, and those can be cut out and spliced. Replacement means a new frame, new glazing, making good inside and out, and losing the original timber, which on an older house is better than anything you can buy today.</p></details>
+      <details class="faq"><summary>Can you put double glazing into an original sash?</summary><p>Often yes. Slim double-glazed units can go into many existing sashes, though it depends on the depth of the rebate and, if the building is listed, on whether consent will be granted. We will tell you honestly whether yours is a candidate.</p></details>
+      <details class="faq"><summary>Do I need permission in a conservation area?</summary><p>Frequently. Conservation areas commonly restrict materials, glazing and the appearance of replacements, and listed buildings need consent even for like-for-like. Draught-proofing and repair are usually permitted where replacement is not, which is another reason restoration is worth looking at first.</p></details>
+      <details class="faq"><summary>How long does a sash restoration take?</summary><p>A single window is typically a day or two depending on the repair. A whole house is planned so you are not left with open holes &mdash; we work through them in sections.</p></details>
+      <details class="faq"><summary>Do you work outside Dunstable?</summary><p>Yes. We cover Bedfordshire and Hertfordshire and travel further for larger jobs and period property. Ring and ask &mdash; if it is too far to do properly we will say so.</p></details>
+    </div>
+  </div>
+</section>
+
 <section class="cta2">
   <div class="wrap">
     <h2>Send a photo. We will tell you if it can be saved.</h2>
@@ -387,7 +420,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{ou
     </div>
     <div class="fnote">
       <b>Concept demonstration &mdash; not a live website.</b> This page was produced by AG1 Consulting to show Crown Restoration Ltd one way their website could work. No form on this page submits anywhere and the instant response shown is a demonstration of routing only &mdash; it is not a quotation, an estimate or an offer.
-      Company name, company number, location, telephone number and all photography are taken from Crown Restoration's own published website and public record and remain their property. <b>Service descriptions, the sash window and heritage guidance, the four-step process and the areas-covered list are illustrative wording written by AG1 to demonstrate the layout &mdash; they have not been confirmed with Crown Restoration and should not be read as commitments the business has made.</b> Statements about listed building consent and conservation area restrictions are general guidance and are not advice on any particular property. <b>No prices, ratings, review counts or customer testimonials appear anywhere on this page</b>, and no claim is made about accreditations, past clients or landmark projects.
+      Company name, company number, location, telephone number and all photography are taken from Crown Restoration's own published website and public record and remain their property. <b>Service descriptions, the sash window and heritage guidance, the four-step process and the areas-covered list and the FAQ answers are illustrative wording written by AG1 to demonstrate the layout &mdash; they have not been confirmed with Crown Restoration and should not be read as commitments the business has made.</b> Statements about listed building consent and conservation area restrictions are general guidance and are not advice on any particular property. <b>No prices, ratings, review counts or customer testimonials appear anywhere on this page</b>, and no claim is made about accreditations, past clients or landmark projects.
     </div>
   </div>
 </footer>
@@ -419,3 +452,5 @@ function route(e){
   return false;
 }
 </script>
+
+<a class="callbar" href="tel:+447595909196">&#9742; Call 07595 909196</a>
